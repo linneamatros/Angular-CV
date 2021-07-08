@@ -1,0 +1,21 @@
+
+h4 {
+  font-family: poppins;
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+
+.row-line { 
+  position: relative;
+  left: 0px;
+  top: -15px;
+  z-index: -10px;
+  border: 1px solid #A7B19D;
+  margin-bottom: 1rem;
+  width: 5%;
+}
+
+.rating i {
+  color: rgb(235, 235, 17);
+  padding: 1px;
+}

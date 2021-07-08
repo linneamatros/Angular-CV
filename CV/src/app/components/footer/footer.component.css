@@ -1,0 +1,15 @@
+
+h4 {
+  font-family: Poppins;
+  font-size: 2rem;
+  }
+
+  .links i {
+    color: #000;
+    font-size: 1.5rem;
+  }
+
+  .links i:hover {
+    color: #A7B19D;
+
+  }

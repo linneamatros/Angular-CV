@@ -1,0 +1,65 @@
+<div id="contact" class="pt-5">
+<div class="container mt-5 pt-5 pb-5">
+
+  <div class="d-flex justify-content-between align-item-center">
+
+
+     <!-- CONTACT -->
+    <div class="col-3 d-none d-lg-flex">
+      <div class="bg-dark h-100 text-white pt-3">
+        <p>CONTACT</p>
+      </div>
+    </div>
+
+    
+    <div class="col-12 col-lg-10 ms-lg-3">
+      <div class=" d-lg-none">
+        <h4 class="mb-3 text-center">Contact</h4>
+        </div>
+  <form class="col-12 col-lg-9" (ngSubmit)="onSub()" [formGroup]="regForm">
+    <!-- Name input -->
+    <div class="form-outline-1 mb-4">
+      <label class="form-label" for="name">Name</label>
+      <input type="text" id="name" class="form-control" formControlName="name" [class.is-invalid]="regForm.controls.name.invalid && regForm.controls.name.touched"/>
+      <div *ngIf="regForm.controls.name.errors?.required" class="mt-0">
+        Name is required.
+      </div>
+    </div>
+  
+    <!-- Email input -->
+    <div class="form-outline-1 mb-4">
+      <label class="form-label" for="email">Email address</label>
+      <input type="email" id="email" class="form-control" formControlName="email" [class.is-invalid]="regForm.controls.email.invalid && regForm.controls.email.touched" />
+      <div *ngIf="regForm.controls.email.errors?.required" class="mt-0">
+        Email address is required.
+      </div>
+    </div>
+
+      
+    <!-- Object input -->
+    <div class="form-outline-1 mb-4">
+      <label class="form-label" for="obeject">Object</label>
+      <input type="text" id="object" class="form-control" formControlName="object" [class.is-invalid]="regForm.controls.object.invalid && regForm.controls.object.touched"/>
+      <div *ngIf="regForm.controls.object.errors?.required" class="mt-0">
+        Fill in an object.
+      </div>
+    </div>
+  
+    <!-- Message input -->
+    <div class="form-outline-1 mb-3">
+      <label class="form-label" for="message">Message</label>
+      <textarea class="form-control" id="message" rows="4" formControlName="message" [class.is-invalid]="regForm.controls.message.invalid && regForm.controls.message.touched"></textarea>
+      <div *ngIf="regForm.controls.message.errors?.required" class="mt-0">
+        Please write a message
+      </div>
+    </div>
+  
+  
+    <!-- Submit button -->
+    <button type="submit" [disabled]="!regForm.valid" class="btn btn-dark btn-block">Send</button>
+  </form>
+</div>
+
+</div>
+</div>
+</div>
